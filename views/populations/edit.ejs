@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Edit Population Info</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/populations">Populations Index</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Population Attributes:</h2>
+      <form action="/populations/<%=population._id%>?_method=PUT" method="post">
+        <input type="text" name="country" value="<%=population.country%>"/><br/>
+        <input type="text" name="totalPopulation" value="<%population.totalPopulation%>"/><br/>
+        <input type="text" name="sexRatio" value="<%=population.sexRatio%>"/><br/>
+        <input type="submit" value="Update Population"/>
+      </form>
+    </main>
+  </body>
+</html>

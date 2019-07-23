@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Create Population</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/populations">Populations Index</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form action="/populations" method="POST">
+        Country:          <input type="text" name="country" /><br/>
+        totalPopulation:  <input type="text" name="totalPopulation" /><br/>
+        sexRatio(m:f):    <input type="text" name="sexRatio" /><br/>
+        <input type="submit" name="" value="Create Population"/>
+      </form>
+    </main>
+  </body>
+</html>

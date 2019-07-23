@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1><%=population.country%></h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/populations">Population Index</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+       <h2>Population Attributes:</h2>
+       <ul>
+         <li>Country: <%=population.country%></li>
+         <li>totalPopulation: <%=population.totalPopulation%></li>
+         <li>sexRatio: <%=population.sexRatio%></li>
+       </ul>
+      </section>
+       <section>
+        <form action="/populations/<%=population._id%>?_method=DELETE" method="POST">
+          <input type="submit" value="Delete Population"/>
+        </form>
+      </section>
+      <section>
+          <a href="/populations/<%=population._id%>/edit">Edit</a>
+      </section>
+     
+    </main>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <h1>Populations</h1>
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/populations/new">Create the new Population</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+          <h2>List of Populations</h2>
+    <ul>
+        <% for(let i = 0; i < populations.length; i++){ %>
+            <li>
+                <a href="/populations/<%=populations[i]._id%>"><%=populations[i].country%></a>
+            </li>
+        <% } %>
+    </ul>
+    </main>
+  </body>
+</html>
